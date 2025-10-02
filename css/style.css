@@ -1,0 +1,399 @@
+@font-face {
+  font-family: 'Brushstrike';
+  src: url('../fonts/brushstrike/Brushstrike\\ trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --- GÉNÉRAL ---------------------------------------------------------------- */
+html, body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  overflow-x: hidden;
+  font-family: 'Brushstrike', sans-serif;
+  color: black;
+  text-align: center;
+}
+
+h1, h3 {
+  color: white;
+  font-family: 'Brushstrike', sans-serif;
+}
+
+/* --- EN-TÊTE / TITRE -------------------------------------------------------- */
+.image {
+  position: relative;
+  top: 0%;
+  width: 470%;
+  height: 7%;
+  z-index: 1;
+}
+
+.texte {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  color: white;
+  font-size: 7em;
+  font-weight: bold;
+  z-index: 1;
+  line-height: 0.9;
+  gap: 0 25px;
+}
+
+.texte h2 {
+  font-family: 'Brushstrike', sans-serif;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: white;
+}
+
+.texteprojet1 {
+  display: inline-block;
+  width: 60%;
+  vertical-align: middle;
+  text-align: justify;
+  margin-bottom: 400px;
+  font-size: 1.2em;
+  color: white;
+}
+
+/* --- NAVIGATION ------------------------------------------------------------- */
+nav {
+  position: absolute;
+  top: 85%;
+  left: 45%;
+  color: black;
+  font-size: 1.4em;
+  font-weight: bold;
+  z-index: 1;
+  line-height: 0.9;
+}
+
+nav a {
+  font-family: 'Brushstrike', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+/* --- LIENS GÉNÉRAUX --------------------------------------------------------- */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.home {
+  position: fixed;
+  bottom: 20px;
+  left: 1830px;
+}
+
+/* --- STRUCTURE -------------------------------------------------------------- */
+section {
+  padding-top: 70px;
+}
+
+/* --- PIED DE PAGE ----------------------------------------------------------- */
+.footer-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: white;
+  padding: 0 60px;
+  color: black;
+  position: relative;
+  font-size: 14px;
+  font-family: Arial, sans-serif !important;
+}
+
+.footer-custom * {
+  color: black !important;
+  font-family: Arial, sans-serif !important;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.footer-center a {
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.footer-center a:hover {
+  text-decoration: underline;
+}
+
+.footer-icon {
+  width: 29px;
+  height: 29px;
+}
+
+.linkedIn-border {
+  border: 1px solid white;
+  padding: 4px;
+}
+
+.footer-right {
+  display: none;
+}
+
+/* --- GLOBAUX / RESET -------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- CONTENEUR PRINCIPAL ---------------------------------------------------- */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+/* --- EN-TÊTE FIXE ----------------------------------------------------------- */
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu div {
+  width: 30px;
+  height: 3px;
+  background: black;
+  margin: 4px 0;
+}
+
+/* --- TITRE SOUS IMAGE ------------------------------------------------------- */
+.title {
+  display: flex;
+  justify-content: space-between;
+  text-transform: lowercase;
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  margin-right: 780px;
+  font-size: 24px;
+  color: black;
+}
+
+/* --- CARROUSEL -------------------------------------------------------------- */
+section#carousel {
+  background-image: url('../images/background_carrousel.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel {
+  position: relative;
+  width: 80vw;
+  height: 620px;
+  overflow: hidden;
+  background: black;
+  margin-left: 0;
+  border-radius: 15px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.8s ease-in-out;  /* ⬅️ plus lent et plus fluide */
+  will-change: transform;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 620px;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 140%;
+  height: 150%;
+  object-fit: cover;
+  object-position: left;
+  display: block;
+  transform: translateX(-15%);
+  border: 5px solid black;
+}
+
+/* --- FLÈCHES CARROUSEL ------------------------------------------------------ */
+.arrow.left,
+.arrow.right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.arrow.left  { left: 10px; }
+.arrow.right { right: 10px; }
+
+/* --- HAMBURGER MENU --------------------------------------------------------- */
+.hamburger-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+}
+
+.hamburger {
+  width: 35px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.hamburger div {
+  height: 4px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 10000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-menu a {
+  color: black;
+  font-size: 3em;
+  margin: 20px 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5em;
+  color: black;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* --- FLECHE SCROLL BAS ------------------------------------------------------ */
+.arrow {
+  position: fixed;
+  bottom: 20px;
+  left: 1830px;
+  transform: translate(-50%, -50%) rotate(180deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 1.5vw;
+  height: 1.5vw;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) { animation-delay: -0.2s; }
+.arrow span:nth-child(3) { animation-delay: -0.4s; }
+
+@keyframes animate {
+  0%   { opacity: 0; transform: rotate(45deg) translate(-20px, -20px); }
+  50%  { opacity: 1; }
+  100% { opacity: 0; transform: rotate(45deg) translate( 20px,  20px); }
+}
+
+/* --- IMAGE DE FOND ACCUEIL -------------------------------------------------- */
+.home-image-container {
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+}
+
+.home-image-container img {
+  width: 100%;
+  height: auto;
+  max-width: 3551px;
+  max-height: 1957px;
+  object-fit: contain;
+  display: block;
+  margin: -20px auto 0;
+}

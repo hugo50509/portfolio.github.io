@@ -1,0 +1,106 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: black;
+}
+
+/* Flèche de retour */
+#back-arrow {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.arrow-icon {
+  width: 400px;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.arrow-icon:hover {
+  opacity: 0.6;
+}
+
+/* Conteneur principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  max-width: 900px;
+  margin: auto;
+  gap: 30px;
+}
+
+/* Colonne gauche */
+.left {
+  width: 30%;
+  font-size: 18px;
+}
+
+/* Colonne droite (formulaire) */
+.right {
+  width: 60%;
+}
+
+/* Formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Titre */
+form h2 {
+  text-align: center;
+  font-size: 24px;
+}
+
+/* Champs */
+.input-group {
+  display: flex;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 12px;
+  border: 2px solid #ccc;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Bouton */
+button {
+  width: 150px;
+  height: 45px;
+  align-self: center;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #333;
+}

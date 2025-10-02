@@ -1,0 +1,226 @@
+/* ============================= */
+/*      BASE & TYPOGRAPHIE       */
+/* ============================= */
+body {
+  margin: 0;
+  background: black;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.page {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ============================= */
+/*           TITRES              */
+/* ============================= */
+.title {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* ============================= */
+/*           SECTIONS            */
+/* ============================= */
+section {
+  margin-bottom: 60px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.top { align-items: flex-start; }
+.right-col { flex: 1; display: flex; align-items: center; }
+.middle { align-items: center; }
+.row { justify-content: space-between; }
+.big { width: 100%; }
+.bottom { justify-content: space-between; flex-wrap: wrap; }
+
+/* ============================= */
+/*            IMAGES             */
+/* ============================= */
+.img-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-link img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.img-link:hover img { transform: scale(1.05); }
+
+.img-link.large { flex: 1; max-width: 50%; }
+.img-link.medium { flex: 1; }
+.img-link.half { flex: 1; max-width: 48%; }
+.img-link.xlarge { width: 100%; }
+
+/* Overlay au survol */
+.overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 15px 10px;
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+.img-link:hover .overlay { opacity: 1; }
+
+/* ============================= */
+/*        PARAGRAPHES            */
+/* ============================= */
+.intro p, .left-text p, .note, .desc p {
+  font-size: 20px;
+  color: #f5f5f5;
+}
+
+.note { width: 48%; line-height: 1.6; }
+
+.desc {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================= */
+/*   Alternance gauche / droite  */
+/* ============================= */
+.row.alt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.row.alt.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ============================= */
+/*         CARTES UX/UI          */
+/* ============================= */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255,255,255,0.15);
+}
+
+/* ============================= */
+/*           LIGHTBOX            */
+/* ============================= */
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(255,255,255,0.2);
+}
+
+/* Icône YouTube sur la miniature */
+.youtube-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+.video-link:hover .youtube-icon {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 1;
+}
+
+/* ============================= */
+/*             FLECHE            */
+/* ============================= */
+.arrow {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow a span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+  transform: rotate(-135deg);
+  margin: -4px;
+  animation: arrowBlink 2s infinite;
+}
+/* Flèche de retour */
+#back-arrow {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.arrow-icon {
+  width: 400px;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+.arrow-icon:hover { opacity: 0.6; }
+
+@keyframes arrowBlink {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+/* ============================= */
+/*          RESPONSIVE           */
+/* ============================= */
+@media (max-width: 1024px) {
+  .top, .middle, .row, .bottom { flex-direction: column; gap: 20px; }
+  .img-link.large, .img-link.half { max-width: 100%; }
+  .note, .desc { width: 100%; }
+  .row.alt, .row.alt.reverse { flex-direction: column !important; }
+}

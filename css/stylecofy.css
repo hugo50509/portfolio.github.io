@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    width: 1920px;
+    height: 1080px;
+}
+
+.container {
+    padding: 50px 80px;
+}
+
+.container h1 {
+    margin-left: 250px; /* Décalage identique au texte */
+}
+
+.text-block {
+    max-width: 800px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-left: 250px;
+}
+
+.right-text {
+    margin-left: 1150px;
+    margin-top: -190px;
+    max-width: 500px;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+.image-placeholder {
+    width: 1200px;
+    height: 600px;
+    margin: 80px auto 0 auto;
+}
+
+/* Flèche de retour */
+#back-arrow {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.arrow-icon {
+    width: 400px;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.arrow-icon:hover {
+    opacity: 0.6;
+}

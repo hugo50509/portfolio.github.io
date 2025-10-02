@@ -1,0 +1,97 @@
+/* Fond noir et police de base */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Conteneur principal */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+/* Section texte */
+.text-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.text-left,
+.text-right {
+  width: 48%;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.text-left ul,
+.text-right ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/* Section images */
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+  padding: 20px 0;
+}
+
+.image-placeholder {
+  width: 100%;
+  max-width: 90%;
+  aspect-ratio: 2 / 3;
+  border: 1px solid #999;
+  background-color: #ccc;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-placeholder:hover {
+  transform: scale(1.03);
+}
+
+/* Flèche de retour */
+#back-arrow {
+  position: fixed;
+  top: 10px;
+  left: 5px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.arrow-icon {
+  width: 300px;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.arrow-icon:hover {
+  opacity: 0.6;
+}
+
+/* Désactiver clics uniquement sur les liens vides (non interactifs) */
+.image-row a[href="#"] {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
