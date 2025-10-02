@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo Prénom</title>
+  <link rel="stylesheet" href="../css/stylelogoprenom.css">
+</head>
+<body>
+  <a href="../html/index.html" id="back-arrow">
+    <img src="../images/back_to_home_arrow_white-02-02.svg" alt="Retour à l'accueil" class="arrow-icon">
+  </a>
+  <div class="container">
+    <div class="text-zone">
+      <div class="text">
+        <h1>Logo prénom</h1>
+        <p>Créations graphiques de mon <strong>logo prénom</strong> qui devait <strong>refléter ma personnalité</strong>.</p>
+        <p>Les <strong>lignes droites horizontales</strong> font référence à ma personnalité à la fois calme et dynamique.</p>
+      </div>
+      <div class="text">
+        <p>Les <strong>formes arrondies</strong> sont universellement associées à des notions positives tel que l’unité et l’harmonie.</p>
+        <p>J’ai choisi d’utiliser <strong>les courbes</strong> afin de refléter davantage le mouvement et de donner du rythme au logo.</p>
+      </div>
+    </div>
+
+    <!-- Carrousel -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-slide active">
+          <a href="../images/graphisme/logoprenom/logoprenom1.png" target="_blank">
+            <img src="../images/graphisme/logoprenom/logoprenom1.png" alt="Image 1">
+          </a>
+        </div>
+        <div class="carousel-slide">
+          <a href="../images/graphisme/logoprenom/logoprenom2.png" target="_blank">
+            <img src="../images/graphisme/logoprenom/logoprenom2.png" alt="Image 2">
+          </a>
+        </div>
+        <div class="carousel-slide">
+          <a href="../images/graphisme/logoprenom/logoprenom3.png" target="_blank">
+            <img src="../images/graphisme/logoprenom/logoprenom3.png" alt="Image 3">
+          </a>
+        </div>
+        <div class="carousel-slide">
+          <a href="../images/graphisme/logoprenom/logoprenom4.png" target="_blank">
+            <img src="../images/graphisme/logoprenom/logoprenom4.png" alt="Image 4">
+          </a>
+        </div>
+
+        <!-- Flèches -->
+        <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+
+      <!-- Points -->
+      <div class="carousel-dots">
+        <span class="dot active" onclick="showSlide(0)"></span>
+        <span class="dot" onclick="showSlide(1)"></span>
+        <span class="dot" onclick="showSlide(2)"></span>
+        <span class="dot" onclick="showSlide(3)"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript intégré -->
+  <script>
+    let currentSlide = 0;
+
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        dots[i].classList.remove('active');
+      });
+
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+      currentSlide = index;
+    }
+
+    function changeSlide(direction) {
+      showSlide(currentSlide + direction);
+    }
+
+    // Optionnel : Navigation clavier (flèches gauche/droite)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        changeSlide(-1);
+      } else if (e.key === 'ArrowRight') {
+        changeSlide(1);
+      }
+    });
+  </script>
+</body>
+</html>

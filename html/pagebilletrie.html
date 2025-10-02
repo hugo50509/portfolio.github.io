@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Site de Billetterie</title>
+  <link rel="stylesheet" href="../css/stylebilletrie.css">
+</head>
+<body>
+    <a href="../html/index.html" id="back-arrow">
+      <img src="../images/back_to_home_arrow_white-02-02.svg" alt="Retour à l'accueil" class="arrow-icon">
+    </a>
+  <div class="arrow">
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+  <main>
+    <section class="intro">
+      <h1>La conception d’un site de billetterie</h1>
+      <p>
+        L’objectif de cette SAE était de concevoir un <strong>site de billetterie pour l’organisation d’événements culturels</strong>.
+      </p>
+      <p>
+        Le site web devait exploiter une <strong>base de données</strong> et permettre quelques interactions simples pour le client (liste, recherche, ajout, …). Le site devait avoir une mise en page respectant l’<strong>accessibilité</strong> et les <strong>W3C</strong>, mais aussi des interactions internes.
+      </p>
+      <p>
+        Nous devions concevoir un <strong>mode administrateur</strong> permettant la programmation d’événements culturels (cinéma, lecture, image à jour, suppressions).
+      </p>
+      <p>
+        La première étape a été de penser la <strong>base de données</strong> (les tables, les entités, les relations, …) et d’obtenir un rendu du MCD.
+      </p>
+      <img src="../images/dev/Billetterie/mcd_sae203.png" alt="MCD SAE 203" class="image fullwidth">
+    </section>
+
+    <section class="wireframe">
+      <h2>La création du wireframe et de l’arborescence des pages.</h2>
+
+      <p>
+        La <strong>page d’accueil du site</strong> permettant la consultation des différentes <strong>pages</strong>.
+      </p>
+      <img src="../images/dev/Billetterie/menu_principal.png" alt="Menu principal" class="image medium">
+
+      <p>
+        Un <strong>système d’inscription utilisateur</strong> (avec vérification d’existence ou non et robustesse du mot de passe).<br>
+        Une <strong>validation de l’inscription par envoi de mail</strong>.<br>
+        Un système <strong>d’authentification sécurisé</strong> comportant un mode utilisateur et un mode administrateur.
+      </p>
+
+      <div class="flex-row">
+        <img src="../images/dev/Billetterie/authentification_user.png" alt="Authentification utilisateur" class="image half">
+        <img src="../images/dev/Billetterie/connection_user.png" alt="Connexion utilisateur" class="image half">
+      </div>
+
+      <p>
+        Une <strong>consultation des événements et des places disponibles</strong> pour les utilisateurs.
+      </p>
+      <img src="../images/dev/Billetterie/page_event.png" alt="Page événements" class="image medium">
+
+      <p>
+        Une <strong>consultation des réservations de billets</strong> en cours pour l’utilisateur.<br>
+        La possibilité <strong>d’annuler sa réservation</strong>.
+      </p>
+      <img src="../images/dev/Billetterie/reservation_event.png" alt="Réservations en cours" class="image small">
+    </section>
+  </main>
+</body>
+</html>
